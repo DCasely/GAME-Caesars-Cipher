@@ -1,3 +1,6 @@
+// ===================================================
+// CAESAR CIPHER FUNCTION
+// ===================================================
 function rot13(str) {
   // CONVERT STRING TO ARRAY SO WE CAN ITERATE THROUGH IT.
   let strArr = str.split('');
@@ -31,4 +34,4 @@ function rot13(str) {
 }
 
 // TEST FUNCTION
-console.log(rot13('SERR PBQR PNZC'));
+// console.log(rot13('SERR PBQR PNZC'));
