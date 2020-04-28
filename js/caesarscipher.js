@@ -1,3 +1,18 @@
+const form = document.querySelector('form');
+const submittedWord = document.querySelector('#submitted-word');
+
+form.addEventListener('submit', input);
+
+// CLEAR INPUT
+submittedWord.value = '';
+
+function input(e) {
+  // GET INPUT
+  console.log(submittedWord.value);
+
+  e.preventDefault();
+}
+
 // ===================================================
 // CAESAR CIPHER FUNCTION
 // ===================================================
