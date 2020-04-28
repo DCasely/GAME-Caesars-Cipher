@@ -1,17 +1,30 @@
 const form = document.querySelector('form');
 const submittedWord = document.querySelector('#submitted-word');
+const result = document.querySelector('#result');
 
-form.addEventListener('submit', input);
-
-// CLEAR INPUT
-submittedWord.value = '';
-
-function input(e) {
+form.addEventListener('submit', (e) => {
   // GET INPUT
-  console.log(submittedWord.value);
+  let input = submittedWord.value;
 
+  // CIPHER INPUT WITH ROT13 FUNCTION
+  let ciphered = rot13(input);
+
+  // DISPLAY MESSAGE
+  result.innerHTML = `Result: ${ciphered}`;
+
+  // WILL STOP THE REDIRECT
   e.preventDefault();
-}
+});
+
+// // CLEAR INPUT
+// submittedWord.value = '';
+
+// function input(e) {
+//   // GET INPUT
+//   console.log(submittedWord.value);
+
+//   e.preventDefault();
+// }
 
 // ===================================================
 // CAESAR CIPHER FUNCTION
